@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function login() {
+			var unm = document.getElementsByName("unm")[0].value;
+			var pwd = document.getElementsByName("pwd")[0].value;
+			
+			if (unm === "" || pwd === "") {
+				alert("All fields are compulsory.");
+				return;
+			}
+			var len = pwd.length;
+			if (len < 6) {
+				alert("Enter a proper password with at least 6 characters.");
+				return;
+			}
+			
+			if (unm === "admin" && pwd === "123456") {
+				alert("You are a valid user.");
+			} else {
+				alert("You are not a valid user.");
+			}
+		}
+	</script>
+</head>
+<body>
+	<form action="#" method="post">
+		<table>
+			<tr>
+				<td>Username:</td>
+				<td><input type="text" placeholder="Enter Username" name="unm"></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type="password" placeholder="Password" name="pwd"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><button type="button" onclick="login()">Login</button></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

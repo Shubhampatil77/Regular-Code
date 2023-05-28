@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>  Array Object Using Methods</title>
+	<script type="text/javascript">
+		var num=[10,20,30,40,50]
+		var city=["Nashik","Mumbai","Pune"]
+
+		for(var i=0;i<5;i++)
+		{
+			document.write(num[i]+"<br>")
+		}
+		var len=city.length
+		document.write("length="+len+"<br>")
+
+		var pos=num.indexOf(30)
+		document.write("Position="+pos+"<br>")
+
+		var ch=city.join()
+		document.write("joins="+ch+"<br>")
+
+		var s=num.slice(1,3)
+		document.write("Slices="+s+"<br>")
+
+		city.reverse()
+		document.write("Reverse="+city+"<br>")
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
