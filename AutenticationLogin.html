@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		function login() {
+			var unm = document.getElementsByName("unm")[0].value;
+			var pwd = document.getElementsByName("pwd")[0].value;
+			if (unm === "admin" && pwd === "1234") {
+				alert("You are a valid user.");
+			} else {
+				alert("You are not a valid user.");
+			}
+		}
+	</script>
+</head>
+<body>
+	<form action="#" method="post">
+		<table>
+			<tr>
+				<td>Username=</td>
+				<td><input type="text" placeholder="Enter Username" name="unm"><br></td>
+			</tr>
+			<tr>
+				<td>Password=</td>
+				<td><input type="password" placeholder="Password" name="pwd"><br></td>
+			</tr>
+			<tr><td><button type="button" onclick="login()">Login</button></td></tr>
+		</table>
+	</form>
+</body>
+</html>

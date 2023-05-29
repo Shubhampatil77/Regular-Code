@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JAVASCRPIT BULIT IN FUNCTION</title>
+</head>
+<body>
+<script type="text/javascript">
+	var cust={
+		cno:10,
+		cnm:"Shubham",
+		show:function()
+		{
+			alert(this.cno+" "+this.cnm)
+		}
+	}
+	var person={
+		cno:100,
+		cnm:"Ram"
+	} 
+	cust.show()
+	cust.show.call(person)
+	cust.show.apply(person,[100,"SHUBHAM"])
+	var greet=cust.show.bind(person)
+	greet()
+</script>
+</body>
+</html>
