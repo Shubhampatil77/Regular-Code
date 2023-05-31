@@ -1,0 +1,32 @@
+<html>
+<head>
+	<style>
+		#t1,#t2{background-color: yellow;},
+		#t3{
+			background-color: red;
+		}
+	</style>
+	<script>
+		function add()
+		{
+			var n1=parseInt(document.frm1.txt1.value)
+			var n2=parseInt(document.frm1.txt2.value)
+			var c=n1+n2
+			document.frm1.txt3.value=c
+		}
+	</script>
+<body>
+	<form name= "frm1">
+		<table>
+			<tr><td>Enter 1st No:</td><td>=<input type="text" id="t1" name="txt1"></td></tr> 
+			<tr><td>Enter 2st No:</td><td>=<input type="text" id="t2" name="txt2"></td></tr>
+			<tr><td>Result:</td><td>=<input type="text" id="t3" name="txt3"></td></tr><br>
+<tr>
+			<td><input type="button"  value="add" onclick="add()"></td>
+			<td><input type="button"  value="reset" onclick="reset()"></td>
+</tr>
+		</table>
+	 </form>
+</body>
+</head>
+</html>
