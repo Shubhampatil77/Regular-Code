@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Creating Object Using New Key Word</title>
+</head>
+<body>
+	<p id="Demo"></p>
+	<p id="Demoo"></p>
+
+<script type="text/javascript">
+	function person(nm,age)
+	{
+		this.nm=nm
+		this.age=age
+		this.greet=function()
+		{
+			alert(nm+" "+age)
+		}
+	}
+
+	const p=new person("Shubham",22)
+	document.getElementById("Demo").innerHTML=p.nm
+	document.getElementById("Demoo").innerHTML=p.age
+	p.greet()
+</script>
+</body>
+</html>
