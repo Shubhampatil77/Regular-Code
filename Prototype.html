@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScrpit Prtotype</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function student(nm,addr)
+		{
+			this.nm=nm;
+			this.addr=addr;
+		}
+		student.prototype.age=22
+		student.prototype.show=function()
+		{
+			alert(this.nm+" "+this.addr+" "+this.age)
+		}
+		var std=new student("Shubham","Pune")
+		alert(std.nm)
+		alert(std.age)
+		std.show()
+	</script>
+</body>
+</html>

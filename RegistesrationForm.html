@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Registration form in JavaScript</title>
+</head>
+<body>
+	<form action="reg" method="post">
+		<table>
+			<tr>
+				<td>Username:</td>
+				<td><input type="text" placeholder="Enter Username" name="unm"></td>
+			</tr>
+			<tr>
+				<td>Email:</td>
+				<td><input type="text" onchange="emaill()" placeholder="Enter Email-Address" name="email"></td>
+			</tr>
+			<tr>
+				<td>Phone No:</td>
+				<td><input type="text" onchange="phonee()" placeholder="Enter Phone Number" name="phone"></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type="password" onchange="login" placeholder="Enter Password" name="pwd"></td>
+			</tr>
+			<tr>
+				<td colspan="5"><button type="button" onclick="login()">Register</button></td>
+			</tr>
+			<tr>
+				<td colspan="5"><button type="reset">Reset</button>
+			<h3>Already have an account? <a href="file:///D:/Java_Script/Login.html">Login now</a></h3>
+				</td>
+
+			</tr>
+		</table>
+	</form>
+	<script type="text/javascript">
+		function login() {
+			var unm = document.getElementsByName("unm")[0].value;
+			var pwd = document.getElementsByName("pwd")[0].value;
+			
+			if (unm === "" || email === "" || phone === "" || pwd === "") {
+				alert("All fields are compulsory.");
+				return;
+			}
+			
+				var len = pwd.length;
+			if (len < 6) {
+				alert("Enter a proper password with at least 6 characters.");
+				return;
+			}
+		}
+		function emaill(){
+			
+						var email = document.getElementsByName("email")[0].value;
+						// Email validation
+			var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+			if (!email.match(emailPattern)) {
+				alert("Enter a valid email address.");
+				return;
+			}
+		}
+		function phonee(){
+				var phone = document.getElementsByName("phone")[0].value;
+				// Phone number validation
+			var phonePattern = /^\d{10}$/;
+			if (!phone.match(phonePattern)) {
+				alert("Enter a valid 10-digit phone number.");
+				return;
+			}
+		}
+	</script>
+</body>
+</html>

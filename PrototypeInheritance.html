@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScrpit Prototype Inheritance</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function student(nm,addr)
+		{
+			this.nm=nm,
+			this.addr=addr;
+		}
+		student.prototype.show=function()
+		{
+			return this.nm+" "+this.addr;
+		}
+		function person(nm,addr,ph,age)
+		{
+			student.call(this,nm,addr)
+			this.ph=ph
+			this.age=age;
+		}
+		person.prototype=new student();
+		person.prototype.constructor=person;
+
+		var p =new person("Shubham","Nashik",7030361787,22);
+
+		document.write("Details Are:"+p.show()+"<br>")
+		document.write("Phone Number Are :"+p.ph+"<br>")
+		document.write("Age Are:"+p.age+"<br>")
+	</script>
+</body>
+</html>
