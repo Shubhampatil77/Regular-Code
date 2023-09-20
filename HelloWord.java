@@ -1,4 +1,4 @@
-package Day1;
+package BasicDay1;
 
 public class HelloWord {
 	public static void main(String args[]) {
