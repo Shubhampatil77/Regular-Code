@@ -30,10 +30,14 @@ class Employee{
 
 class SimpleclassObject2 {
 	public static void main(String args[]) {
-		Employee E=new Employee();
-		E.accept();
-		E.display();
+		Employee s[]=new Employee[4];
 		
+		for(int i=1;i<=4;i++)
+		{
+			s[i]=new Employee();
+			s[i].accept();
+			s[i].display();
+		}
 	}
 
 }
