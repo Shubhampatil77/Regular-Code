@@ -9,7 +9,7 @@ public class REVRSENUMBERDoWhileLoop1 {
 		System.out.println("Enter The Number:");
 
 		n = sc.nextInt();
-		while (n > 0) {
+		while (n != 0) {
 			rev = (rev * 10) + n % 10;
 			n = n / 10;
 		}
