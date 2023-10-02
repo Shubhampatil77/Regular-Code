@@ -1,22 +1,15 @@
-package GenericDay3;
-import java.util.*;
-public class Demo {
-	public static void main(String args[])
-	{
-		//Genric Type-Safe
-		List<String> one=new ArrayList();
-		one.add("Shubham");
-		one.add("Durgesh");
-		
-		System.out.println(one);
-			
-		//Not Generic Type-Safe
-		List two=new ArrayList();
-		two.add(1);
-		two.add("Two");
-		System.out.println(two);
+package Day10;
 
-	}
-	
-
-}
+	import java.util.*;  
+	import java.io.*;  
+	public class Demo {  
+	public static void main(String[] args)throws Exception{  ArrayList<String> list=new ArrayList<String>();    
+	list.add("ankit");    
+	list.add("nippun");  
+	System.out.println(list.size());  
+	int[] array = new int[4];  
+	System.out.println("The size of the array is " + array.length);  
+	   
+	          
+	}  
+	}  
