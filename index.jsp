@@ -1,64 +1,37 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page isELIgnored="false"%>
-<%@ page import="dao.Customerdao"%>
-<%@ page import="com.connect"%>
-<%@ page import="entity.customer"%>
-<%@ page import="java.util.List"%>
+<%@page import="com.DB.DBConnect"%>
+<%@page import="java.sql.Connection"%>
 
-
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-table, th, td {
-	border: 1px solid black;
-	border-collapse: collapse;
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<base>
+<%@include file="all_component/all_css.jsp"%>
+<style type="text/css">
+.back-img {
+	background: url("img/j1.jpg"); 9: 100%;
+	height: 120vh;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 </style>
-<meta charset="UTF-8">
-<title>Customer List</title>
 </head>
 <body>
-	<h1>Customer List</h1>
-	<table>
-		<tr>
-			<th>First Name</th>
-			<th>Last Name</th>
-			<th>Street</th>
-			<th>Address</th>
-			<th>City</th>
-			<th>State</th>
-			<th>Email</th>
-			<th>Phone</th>
-			<th>Edit</th>
-			<th>Delete</th>
-		</tr>
+	<%@include file="all_component/navbar.jsp"%>
+	<div class="container-fluid back-img">
+		<div class="text-center">
+			<h1 class="text-white p-4">
+				<i class="fa fa-book" aria-hidden="true"></i> Online Job Portal
+			</h1>
+		</div>
+	</div>
+	<%@include file="all_component/footer.jsp"%>
 
-		<%
-		Customerdao dao = new Customerdao(connect.getConn());
-		List<customer> list = dao.getallcustomer();
-		for (customer c : list) {
-		%>
-		<tr>
-			<td><%=c.getFname()%></td>
-			<td><%=c.getLname()%></td>
-			<td><%=c.getStreet()%></td>
-			<td><%=c.getAddress()%></td>
-			<td><%=c.getCity()%></td>
-			<td><%=c.getState()%></td>
-			<td><%=c.getEmail()%></td>
-			<td><%=c.getPhone()%></td>
-			<td><a href="edit.jsp?email=<%=c.getEmail()%>"><button type="button">Edit Customer</button></a></td>
-			<td><a href="delete?email=<%=c.getEmail()%>"><button type="button">Delete Customer</button></a></td>
-		</tr>
-		
-		<%
-		}
-		%>
-	</table>
-	<a href="add.jsp"><button type="button">Add Customer</button></a>
-	
+
+
+
 </body>
 </html>
